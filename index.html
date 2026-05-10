@@ -2032,9 +2032,41 @@
       display: none;
     }
 
-    @media(min-width: 768px) {
+    @media(min-width: 1001px) {
       .photo-scatter-container {
         display: block;
+      }
+    }
+
+    .photo-scatter {
+      position: absolute;
+      background: white;
+      border: 6px solid white;
+      border-radius: 4px;
+      box-shadow: 0 10px 20px rgba(43, 35, 32, 0.15);
+      transition: transform 0.4s, z-index 0s;
+      cursor: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .photo-scatter:hover {
+      transform: scale(1.05) rotate(0deg) !important;
+      z-index: 50;
+    }
+
+    .photo-scatter img,
+    .photo-scatter svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    @media(max-width: 1000px) {
+      .art-gallery {
+        grid-template-columns: repeat(2, 1fr);
       }
     }
 
@@ -2088,13 +2120,8 @@
         position: static;
       }
 
-      .art-gallery {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .art-item:nth-child(1) {
-        grid-column: span 2;
-        grid-row: span 1;
+      .photo-scatter-container {
+        display: none !important;
       }
 
       .footer-top {
@@ -2837,7 +2864,7 @@
         </div>
         <div>
           <div class="footer-links-grid">
-            <a href="#" class="flink resume" target="_blank"><strong>↓ Download Resume</strong></a>
+            <a href="assets/anubhutiat.pdf" class="flink resume" target="_blank"><strong>↓ Download Resume</strong></a>
             <a href="https://www.instagram.com/anuuuu.12/?hl=en" class="flink" target="_blank">
               <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
                 <path
